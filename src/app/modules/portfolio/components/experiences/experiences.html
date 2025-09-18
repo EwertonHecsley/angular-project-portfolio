@@ -1,0 +1,14 @@
+<section class="container">
+    <h2>Experiências</h2>
+    @for (item of arrayExperiences(); track $index) {
+         <details>
+            <summary>
+                <p>
+                    <strong>{{item.sumary.strong}}</strong>
+                    {{item.sumary.p}}
+                </p>
+            </summary>
+            <article [innerHTML]="item.text"></article>
+        </details>
+    }
+</section>
