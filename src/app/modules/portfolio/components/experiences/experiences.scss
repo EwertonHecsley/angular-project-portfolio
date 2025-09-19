@@ -1,0 +1,73 @@
+:host {
+  margin-top: 25px;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+
+  h2 {
+    text-align: center;
+    margin: 0 0 25px 0;
+  }
+
+  details {
+    overflow: hidden;
+    margin-top: 10px;
+    background: var(--black-010);
+    border-radius: 7px;
+    color: var(--white);
+
+    summary,
+    article {
+      padding: 10px 20px;
+      color: var(--grey);
+      transition: 500ms;
+    }
+
+    summary {
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--primary);
+
+      /* remove o marcador padrão */
+      &::-webkit-details-marker {
+        display: none;
+      }
+
+      p {
+        font-size: 14px;
+        color: var(--black-010);
+        padding: 0;
+        margin: 0;
+
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* ícone padrão (chevron down) */
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        margin-left: 8px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url("/assets/icon/chevron-down.svg");
+      }
+    }
+
+    /* ícone quando aberto (chevron up) */
+    &[open] summary::after {
+      background-image: url("/assets/icon/chevron-up.svg");
+    }
+
+    &[open] summary {
+      background: var(--primary);
+      border-radius: 7px 7px 0 0 !important;
+    }
+  }
+}
