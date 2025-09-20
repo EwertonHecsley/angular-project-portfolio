@@ -1,0 +1,19 @@
+<header>
+    <h2 mat-dialog-title>{{getData()?.title}}</h2>
+    <button (click)="closeModal()">
+        <img src="/assets/icon/dialog/close.svg" alt="Botao de fechar modal">
+    </button>
+</header>
+
+<mat-dialog-content>
+    <h3>Descrição</h3>
+    <article [innerHTML]="getData()?.description"></article>
+
+    <nav>
+        @for (item of getData()?.links; track $index) {
+            <a [href]="item.href" target="_blank" class="btn btn-primary">
+                {{item.name}}
+            </a>
+        }
+    </nav>
+</mat-dialog-content>
