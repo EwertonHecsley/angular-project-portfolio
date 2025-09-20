@@ -1,59 +1,94 @@
-# AngularPortifolio
+# Angular Portfólio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.2.2.
+Este projeto é um portfólio desenvolvido com [Angular](https://angular.dev/) e [Angular Material](https://material.angular.dev/), apresentando experiências, conhecimentos, projetos e informações de contato de Ewerton Hecsley.
 
-## Development server
+## Funcionalidades
 
-To start a local development server, run:
+- Apresentação de perfil profissional
+- Listagem de conhecimentos técnicos
+- Experiências profissionais detalhadas
+- Projetos desenvolvidos com links para repositórios
+- Download do currículo em PDF
+- Links para contato via WhatsApp, e-mail, LinkedIn e Github
 
-```bash
-ng serve
+## Estrutura do Projeto
+
+```
+src/
+  app/
+    modules/
+      portfolio/
+        components/
+        enum/
+        interface/
+        pages/
+    app.config.ts
+    app.routes.ts
+    app.ts
+  scss/
+    base/
+    components/
+    layout/
+    theme/
+  index.html
+  main.ts
+  styles.scss
+public/
+  assets/
+    icon/
+    img/
+    pdf/
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Como executar
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Instalação
 
 ```bash
-ng generate component component-name
+npm install
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### Ambiente de desenvolvimento
 
 ```bash
-ng generate --help
+npm start
 ```
 
-## Building
+Acesse [http://localhost:4200](http://localhost:4200) no navegador.
 
-To build the project run:
+### Build para produção
 
 ```bash
-ng build
+npm run build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Os arquivos finais estarão em `dist/`.
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+### Testes
 
 ```bash
-ng test
+npm test
 ```
 
-## Running end-to-end tests
+## Personalização
 
-For end-to-end (e2e) testing, run:
+- Os estilos estão em SCSS, organizados por base, componentes, layout e tema.
+- Os dados de experiências, conhecimentos e projetos podem ser alterados nos arquivos correspondentes em `src/app/modules/portfolio/components/`.
 
-```bash
-ng e2e
-```
+## Tecnologias utilizadas
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+- Angular 20+
+- Angular Material
+- SCSS
+- TypeScript
 
-## Additional Resources
+## Contato
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- [LinkedIn](https://www.linkedin.com/in/ewerton-hecsley-8a613992/)
+- [Github](https://github.com/EwertonHecsley)
+- WhatsApp: (83) 99850-7503
+- E-mail: ewerton.martinscomercial@gmail.com
+
+---
+
+Projeto criado por Ewerton Hecsley.
